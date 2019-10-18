@@ -75,11 +75,13 @@ end;
 
 procedure TfmMainOfCEF.tmByeTimer(Sender: TObject);
 begin
+  tmBye.Enabled := false;
   Application.Terminate;
 end;
 
 procedure TfmMainOfCEF.tmStartTimer(Sender: TObject);
 begin
+  tmStart.Enabled := false;
   rp_GoHome(nil);
 end;
 
