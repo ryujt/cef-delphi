@@ -8,14 +8,14 @@ uses
   Core in 'Core\Core.pas',
   View in 'Core\View.pas',
   JavaScript in 'Core\JavaScript.pas',
-  Globals in 'Globals.pas';
+  Globals in 'Globals.pas',
+  _frBrowser in '_frBrowser.pas' {frBrowser: TFrame};
 
 {$R *.res}
 
 begin
   GlobalCEFApp := TCefApplication.Create;
   GlobalCEFApp.EnableGPU := true;
-  GlobalCEFApp.UserAgent := GlobalCEFApp.UserAgent + 'AsomeCodeApp';
   GlobalCEFApp.DeleteCache := false;
   GlobalCEFApp.DeleteCookies := false;
   GlobalCEFApp.OnWebKitInitialized :=

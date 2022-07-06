@@ -1,0 +1,6 @@
+[submodule "lib/ryulib-delphi"]
+	path = lib/ryulib-delphi
+	url = https://github.com/ryujt/ryulib-delphi.git
+[submodule "lib/CEF4Delphi"]
+	path = lib/CEF4Delphi
+	url = https://github.com/salvadordf/CEF4Delphi.git

@@ -9,7 +9,7 @@ uses
 type
   TJSExtension = class
     class function version:string;
-    class procedure Command(text:string);
+    class procedure postMessage(msg:string);
   end;
 
   TJavaScript = class (THandleComponent)
@@ -36,9 +36,9 @@ begin
   Result := '1.0';
 end;
 
-class procedure TJSExtension.Command(text:string);
+class procedure TJSExtension.postMessage(msg:string);
 begin
-  TJavaScript.Obj.SendString(text);
+  TJavaScript.Obj.SendString(msg);
 end;
 
 { TJavaScript }

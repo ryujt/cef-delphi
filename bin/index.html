@@ -1,1 +1,31 @@
-Hi
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <title>Test Page</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  </head>
+  <body>
+    <div onclick="sayHello()">Hi</div>
+  </body>
+</html>
+
+<script>
+    function sendMessage(msg) {
+        try {
+            App.postMessage(JSON.stringify(msg));
+        } catch (e) {
+            console.log(msg);
+            console.log(e);
+        }
+    }
+
+    function sayHello() {
+        const msg = {
+            code: "Say",
+            msg: "Hello World"
+        }
+        sendMessage(msg);
+    }
+</script>
